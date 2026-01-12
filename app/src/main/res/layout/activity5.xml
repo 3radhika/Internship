@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/dr" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Video Calling"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#5056FF"
+            android:padding="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvCallInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="This call has been extended for 10 mins"
+            android:textSize="12sp"
+            android:textColor="#2E7D32"
+            android:padding="10dp"
+            android:background="@drawable/bg_call_info"
+            app:layout_constraintBottom_toTopOf="@id/controlsLayout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginBottom="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/controlsLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <ImageButton
+                android:id="@+id/btnVideo"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/bg_green_circle"
+                android:src="@drawable/ic_video"
+                android:contentDescription="Video" />
+
+            <ImageButton
+                android:id="@+id/btnMic"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_green_circle"
+                android:src="@drawable/ic_mic"
+                android:contentDescription="Mic" />
+
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_green_circle"
+                android:src="@drawable/ic_menu"
+                android:contentDescription="Menu" />
+
+            <ImageButton
+                android:id="@+id/btnEndCall"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:layout_marginStart="16dp"
+                android:background="@drawable/bg_red_circle"
+                android:src="@drawable/ic_call_end"
+                android:contentDescription="End Call" />
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

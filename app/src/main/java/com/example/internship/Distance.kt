@@ -7,8 +7,8 @@ class Point2D(var x: Double, var y: Double) {
 
     fun distance(other: Point2D): Double {
         return sqrt(
-            (other.x - x).pow(2) +
-                    (other.y - y).pow(2)
+            (other.x - x).pow(2.0) +
+                    (other.y - y).pow(2.0)
         )
     }
 }

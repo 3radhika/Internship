@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/icQr"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/Qr"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvQrTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show QR Code"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/icQr"
+        app:layout_constraintTop_toTopOf="@id/icQr"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/tvQrSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Scan with any UPI app"
+        android:textSize="12sp"
+        android:textColor="#777777"
+        app:layout_constraintStart_toStartOf="@id/tvQrTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvQrTitle"/>
+
+    <RadioButton
+        android:id="@+id/rbQr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icQr"/>
+
+    <View
+        android:id="@+id/div1"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#E0E0E0"
+        app:layout_constraintTop_toBottomOf="@id/tvQrSub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+
+    <ImageView
+        android:id="@+id/icUpi"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/upi"
+        app:layout_constraintTop_toBottomOf="@id/div1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="12dp"/>
+
+    <TextView
+        android:id="@+id/tvUpiTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="UPI ID"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/icUpi"
+        app:layout_constraintTop_toTopOf="@id/icUpi"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/tvUpiSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PhonePe, Gpay, Paytm, BHIM & more"
+        android:textSize="12sp"
+        android:textColor="#777777"
+        app:layout_constraintStart_toStartOf="@id/tvUpiTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvUpiTitle"/>
+
+    <RadioButton
+        android:id="@+id/rbUpi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icUpi"/>
+
+
+    <ImageView
+        android:id="@+id/icCard"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:src="@drawable/ic_card"
+        app:layout_constraintTop_toBottomOf="@id/tvUpiSub"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <TextView
+        android:id="@+id/tvCardTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Card"
+        android:textStyle="bold"
+        android:textSize="14sp"
+        app:layout_constraintStart_toEndOf="@id/icCard"
+        app:layout_constraintTop_toTopOf="@id/icCard"
+        android:layout_marginStart="12dp"/>
+
+    <TextView
+        android:id="@+id/tvCardSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visa, Mastercard, Rupay & more"
+        android:textSize="12sp"
+        android:textColor="#777777"
+        app:layout_constraintStart_toStartOf="@id/tvCardTitle"
+        app:layout_constraintTop_toBottomOf="@id/tvCardTitle"/>
+
+    <RadioButton
+        android:id="@+id/rbCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/icCard"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardForm"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="2dp"
+        android:backgroundTint="#F3ECFA"
+        app:layout_constraintTop_toBottomOf="@id/tvCardSub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:text="Card number"
+                android:textStyle="bold"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter your card number"
+                android:inputType="number"/>
+
+            <TextView
+                android:text="Name"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Enter card holder’s full name"/>
+
+            <TextView
+                android:text="Valid till"
+                android:textStyle="bold"
+                android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="4dp">
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:hint="MM"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:hint="YY"
+                    android:layout_marginStart="8dp"/>
+
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:hint="CVV"
+                    android:layout_marginStart="8dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvNetBank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Net Banking\nChoose your bank to complete payment"
+        android:textSize="13sp"
+        app:layout_constraintTop_toBottomOf="@id/cardForm"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp"/>
+
+    <RadioButton
+        android:id="@+id/rbNet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tvNetBank"/>
+
+
+    <TextView
+        android:id="@+id/tvPowered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by PhonePe"
+        android:textSize="12sp"
+        android:textColor="#6A1B9A"
+        app:layout_constraintTop_toBottomOf="@id/tvNetBank"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"/>
+
+
+    <Button
+        android:id="@+id/btnCancel"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="CANCEL"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#666666"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/btnConfirm"
+        android:layout_margin="8dp"/>
+
+    <Button
+        android:id="@+id/btnConfirm"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="CONFIRM"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#2F80ED"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/btnCancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_margin="8dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
